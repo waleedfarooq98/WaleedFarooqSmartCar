@@ -3,11 +3,13 @@
  */
 package SmartCarLab1WaleedFarooq;
 
+import edu.fiu.sysdesign.SelfCheckUtils;
+
 /**
  * @author Waleed
  *
  */
-public class SmartCar {
+public class SmartCar implements SelfCheckCapable {
 	
 	private String registrationNum;
 	private int year;
@@ -42,11 +44,29 @@ public class SmartCar {
 		System.out.println("Stop the Car");
 	}
 	
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		String name = null;
+		return name;
+	}
+	
+	public boolean runSelfCheck() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	
 	public void runDiagnostics() {
 		System.out.println("Systems are all OK");
 	}
-
-	/**
+	
+	
+	 /**
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -59,12 +79,12 @@ public class SmartCar {
 		System.out.println("Registration Number: " + myCar.registrationNum);
 		System.out.println("License Number: " + myCar.licenseNum + "\n");
 		
+		myCar.runSelfCheck();
 		myCar.runDiagnostics();
-		
-		
 		
 	
 
 	}
+
 
 }
