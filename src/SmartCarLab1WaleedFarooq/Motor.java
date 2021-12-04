@@ -3,11 +3,13 @@
  */
 package SmartCarLab1WaleedFarooq;
 
+import edu.fiu.sysdesign.SelfCheckCapable;
+
 /**
  * @author Waleed
  *
  */
-public class Motor {
+public class Motor implements SelfCheckCapable {
 	
 	private int voltage;
 	
@@ -28,6 +30,22 @@ public class Motor {
 	
 	public void accelerate() {
 		System.out.println("Accelerate");
+	}
+	
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		String name = null;
+		return name;
+	}
+	
+	public boolean runSelfCheck() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 }

@@ -3,6 +3,7 @@
  */
 package SmartCarLab1WaleedFarooq;
 
+import edu.fiu.sysdesign.SelfCheckCapable;
 import edu.fiu.sysdesign.SelfCheckUtils;
 
 /**
@@ -44,6 +45,13 @@ public class SmartCar implements SelfCheckCapable {
 		System.out.println("Stop the Car");
 	}
 	
+	public void startOTAUpdate() {
+		System.out.println("Update started");
+	}
+	
+	public void switchToUpdatedSystem() {
+		System.out.println("Switched to new updated system");
+	}
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub
 		return true;

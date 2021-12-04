@@ -3,11 +3,13 @@
  */
 package SmartCarLab1WaleedFarooq;
 
+import edu.fiu.sysdesign.SelfCheckCapable;
+
 /**
  * @author Waleed
  *
  */
-public class Battery {
+public class Battery implements SelfCheckCapable {
 	
 	private int capacity;
 	private String type;
@@ -34,5 +36,26 @@ public class Battery {
 	public void charge() {
 		System.out.println("Battery is charging");
 	}
+	
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		String name = null;
+		return name;
+	}
+	
+	public boolean runSelfCheck() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	
+	public void runDiagnostics() {
+		System.out.println("Systems are all OK");
+	}
+	
 
 }
